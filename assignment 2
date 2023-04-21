@@ -1,0 +1,86 @@
+using System.Runtime.InteropServices;
+
+namespace Day3;
+
+public class Program {
+    public static void Main(string[] args)
+    {
+        int[] numbers = GenerateNumbers();
+        Reverse(numbers);
+        PrintNumbers(numbers);
+    }
+
+    public static int[] GenerateNumbers()
+    {
+        int[] ans = new int[10];
+        for (int i = 0; i < 10; i++)
+        {
+            ans[i] = i+1;
+        }
+        return ans;
+    }
+
+    public static void Reverse(int[] a)
+    {
+        for (int i = 0; i < a.Length / 2; i++) { 
+            int temp = a[i];
+            a[i] = a[a.Length -i - 1];
+            a[a.Length - i - 1] = temp;
+        }
+    }
+
+    public static void PrintNumbers(int[] a) {
+        for (int i = 0; i < 10; i++) {
+            Console.WriteLine(a[i]);
+        }
+    }
+}
+
+/*
+ * 1. Public
+
+Private
+
+Protected
+
+Internal
+
+Protected Internal
+
+Private Protected
+
+Access modifiers are used to specify the scope of accessibility of a member of a class or type of the class itself. 
+
+2. Readonly variable cannot be modified at run-time. It can only be initialized or changed in the constructor. Constant variables cannot be modified after declaration. Static members can be accessed using ClassName.
+
+3.A constructor is a special method of a class or structure in object-oriented programming that initializes a newly created object of that type. 
+
+4. With partial classes, we can physically separate a class into multiple files.
+
+5. Tuples are great for passing multiple variables between methods
+
+6. we use the record keyword to define a reference type that provides built-in functionality for encapsulating data.
+
+7. Fields are ordinary member variables or member instances of a class. Properties are an abstraction to get and set their values. 
+
+8. I know the answer
+
+9. I know the answer
+
+10. I know
+
+11. I know
+
+12. T
+13. T
+14. F
+15. F
+16. T
+17. T
+18. T
+19. T
+20. F
+21. T
+22. F
+23. T
+ */
